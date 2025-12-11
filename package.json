@@ -46,6 +46,7 @@
     "typescript-eslint": "^8.6.0"
   },
   "dependencies": {
+    "@faker-js/faker": "^10.1.0",
     "@tinyhttp/app": "^2.4.0",
     "@tinyhttp/cors": "^2.0.1",
     "@tinyhttp/logger": "^2.0.0",
