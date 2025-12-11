@@ -33,9 +33,9 @@ function generateOrderLines(count = 3) {
 // Main data generator
 function main() {
   const data = {
-    orders: [],
-    customers: [],
-    products: []
+    'maropost-orders': [],
+    'maropost-customers': [],
+    'maropost-products': []
   };
 
   // Generate 50 Orders (matching Neto API structure)
@@ -55,7 +55,7 @@ function main() {
     const orderTax = orderLines.reduce((sum, line) => sum + parseFloat(line.Tax), 0);
     const grandTotal = productSubtotal + shippingTotal + orderTax;
 
-    data.orders.push({
+    data['maropost-orders'].push({
       OrderID: orderId,
       ID: orderId,
       Username: faker.internet.username(),
@@ -135,7 +135,7 @@ function main() {
     const firstName = faker.person.firstName();
     const lastName = faker.person.lastName();
     
-    data.customers.push({
+    data["maropost-customers"].push({
       CustomerID: `C${String(i).padStart(6, '0')}`,
       Username: faker.internet.username(),
       Email: faker.internet.email(),
@@ -174,7 +174,7 @@ function main() {
     const productName = faker.commerce.productName();
     const brand = faker.company.name();
     
-    data.products.push({
+    data["maropost-products"].push({
       ProductID: i,
       SKU: `PROD-${faker.string.alphanumeric(8).toUpperCase()}`,
       Name: productName,
